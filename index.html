@@ -20,7 +20,6 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +54,7 @@
                         <section class="mb-5">
                             <p class="fs-5 mb-4">This portfolio is a demonstration of the problem-solving, technical, and visualization skills I learned in the Fundamentals of Geographic Information Systems (GIS) course this semester. The three examples provided showcase my learning journey to problem-solve in a GIS framework, apply new tools and skills in Arc GIS Pro, and produce quality visualizations. </p>
                            
-                            <h2 class="fw-bolder mb-4 mt-5">Exploring Housing Occupancy Rates in Miami</h2>
+                            <h2 class="fw-bolder mb-4 mt-5">Exploring Housing Occupancy in Miami</h2>
                             <p class="fs-5 mb-4">This map explores the percentage of occupied housing units by Census tract in northern Miami (Dade County), Florida. The map was produced as part of a broader exercise to examine population density and rates of occupied and vacant housing units in the area. Solving this problem involved working with data from the US Census Bureau and applying several new skills to get the data into a workable format for mapping. These included changing the projection of the shapefile of Census tracts to an appropriate regional projection and joining Census attribute data to the shapefile of tracts. </p>
                             <p class="fs-5 mb-4">To map the metric of interest, I used a tool to calculate a new field in the data that quantified the percent of occupied housing units based on existing attributes that summarized the number of occupied housing units and the total number of housing units in each tract. I then created a graduated colors choropleth map of this attribute using the ‘symbology’ tool, opting to group the data by quantiles for clear visual distinction between categories on the map. Finally, I used various skills learned in the ‘layout’ tool to create a professional visualization, including clipping the map and adding a cleanly-formatted legend, a scale bar, a title and caption, and a north arrow. </p>
                             <!-- Miami image figure-->
@@ -65,7 +64,7 @@
                         </section>
 
                         <section class="mb-5">
-                            <h2 class="fw-bolder mb-4 mt-5">Visualizing the Density of Homicides in Chicago </h2>
+                            <h2 class="fw-bolder mb-4 mt-5">Visualizing Homicide Rates in Chicago </h2>
                             <p class="fs-5 mb-4">This map displays the spatial distribution of the rate of homicides per square mile by police district in Chicago. This analysis was part of a broader problem-solving exercise to assess the geographic distribution of homicides in Chicago and explore whether there is a spatial relationship between the locations of homicides and tourism, specifically Airbnb listings and prices in the city. To develop this map, I relied on data files of police districts and crime incidents in Chicago from the City of Chicago Open Data Portal, to which I applied a sequence of analytical steps to create the choropleth map below. </p>
                             <p class="fs-5 mb-4">First, I changed the projection of the shapefiles to a more appropriate projection and filtered the crime incidents data to include only incidents of homicides by using the ‘select by attribute’ tool. I then used the ‘summarize’ operation to create a summary table of the count of homicides by police district, which I joined to the police districts polygon file. Next, I added several additional fields to the data, first quantifying the area of each police district in square miles using the ‘calculate geometry’ function, and then the number of homicides per square mile in each district using the ‘calculate field’ function. Finally, I created the below map of police districts where each district is shaded by the density of homicides per square mile in that district using skills referenced in the prior section to adjust the ‘symbology’ and layout of the map. </p>
                             <!-- Chicago image figure-->
@@ -75,7 +74,7 @@
                         </section>
 
                         <section class="mb-5">
-                            <h2 class="fw-bolder mb-4 mt-5">Examining 2020 General Election Results in Pennsylvania</h2>
+                            <h2 class="fw-bolder mb-4 mt-5">Examining Election Results in Pennsylvania</h2>
                             <p class="fs-5 mb-4">This map displays the vote shares received by the Democratic and Republican parties in the 2020 presidential election by county in Pennsylvania. This analysis sought to break down the winning vote share received by either Donald Trump or Joe Biden in each county into defined categories and display the results in a categorical choropleth map. </p>
                             <p class="fs-5 mb-4">To create this map, I relied on polygon data of Pennsylvania counties, which I modified to a more suitable projection before joining to county-level data on election results. I then added new fields to the data: one that reclassified an existing attribute with Trump’s vote share to the defined categories for the Republican vote share, and another that reclassified the Biden vote share to the defined Democratic vote share categories. This involved writing code in Python within Arc GIS Pro to sort the vote share fields into descriptive categories. I then concatenated the Democratic and Republican vote share fields into a new field where each county had one categorical value to summarize the party vote share received by the candidate who received the majority vote. I created the choropleth map below by using the ‘unique values’ symbology, changing the colorway of the map to readable categories, and laying out the map with appropriate features.</p>
                             <!-- Chicago image figure-->
